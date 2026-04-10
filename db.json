@@ -1,0 +1,80 @@
+{
+  "users": [],
+  "groups": [],
+  "groupMembers": [],
+  "records": [],
+  "categories": [
+    {
+      "type": "income",
+      "name": "급여",
+      "id": "cat001",
+      "icon": "💰"
+    },
+    {
+      "type": "income",
+      "name": "보너스",
+      "id": "cat002",
+      "icon": "🎁"
+    },
+    {
+      "id": "cat006",
+      "type": "income",
+      "name": "투자",
+      "icon": "📈"
+    },
+    {
+      "id": "cat007",
+      "type": "income",
+      "name": "부수입",
+      "icon": "💼"
+    },
+    {
+      "type": "income",
+      "id": "cat012",
+      "name": "기타",
+      "icon": "📌"
+    },
+    {
+      "type": "expense",
+      "name": "식비",
+      "id": "cat003",
+      "icon": "🍔"
+    },
+    {
+      "type": "expense",
+      "name": "교통비",
+      "id": "cat004",
+      "icon": "🚗"
+    },
+    {
+      "type": "expense",
+      "name": "여가비",
+      "id": "cat005",
+      "icon": "🎮"
+    },
+    {
+      "type": "expense",
+      "name": "건강",
+      "id": "cat008",
+      "icon": "💊"
+    },
+    {
+      "type": "expense",
+      "name": "교육",
+      "id": "cat009",
+      "icon": "📚"
+    },
+    {
+      "type": "expense",
+      "name": "공과금",
+      "id": "cat010",
+      "icon": "💡"
+    },
+    {
+      "type": "expense",
+      "id": "cat011",
+      "name": "기타",
+      "icon": "📌"
+    }
+  ]
+}
