@@ -3,7 +3,7 @@ import cors from 'cors'
 import { createProxyMiddleware } from 'http-proxy-middleware'
 import { exec } from 'child_process'
 
-// json-server를 3001 포트로 별도 실행
+// json-server를 3000 포트로 별도 실행
 exec('npx json-server db.json --port 3000', (err) => {
     if (err) console.error('json-server error:', err)
 })
