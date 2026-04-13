@@ -1,4 +1,5 @@
 import express from "express";
+import rateLimit from 'express-rate-limit'
 import cors from "cors";
 import {createProxyMiddleware} from "http-proxy-middleware";
 import {exec} from "child_process";
@@ -10,7 +11,16 @@ exec("npx json-server db.json --port 3000", (err) => {
 
 const app = express();
 
-const allowedOrigin = process.env.ORIGIN
+const allowedOrigin = process.env.ORIGIN;
+
+const limiter = rateLimit({
+    windowMs: 60 * 1000,
+    limit: 100,
+    message: {message: "Too Many Requests"},
+});
+
+// 모든 요청에 적용
+app.use(limiter);
 
 app.use((req, res, next) => {
     const origin = req.headers.origin;
