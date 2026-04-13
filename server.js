@@ -22,6 +22,7 @@ const limiter = rateLimit({
 // 모든 요청에 적용
 app.use(limiter);
 
+/*
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     // origin 없거나, 허용된 origin이 아니면 차단
@@ -31,6 +32,7 @@ app.use((req, res, next) => {
 
     next();
 });
+*/
 
 app.use(cors({
     origin: allowedOrigin,
