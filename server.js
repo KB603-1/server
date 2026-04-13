@@ -22,17 +22,13 @@ const limiter = rateLimit({
 // 모든 요청에 적용
 app.use(limiter);
 
-/*
 app.use((req, res, next) => {
-    const origin = req.headers.origin;
-    // origin 없거나, 허용된 origin이 아니면 차단
-    if (!origin || origin !== allowedOrigin) {
-        return res.status(403).json({message: "Forbidden: Invalid Origin"});
+    const fetchMode = req.headers['sec-fetch-mode'];
+    if (fetchMode === 'navigate') {
+        return res.status(403).json({ message: 'Forbidden' });
     }
-
     next();
 });
-*/
 
 app.use(cors({
     origin: allowedOrigin,
